@@ -79,8 +79,8 @@ def plot_i(results, markersize=3):
 
     for n, pair in enumerate(results.items()):
         # pair[0] is the label, and pair[1] is the ExperimentResult
-        ax1.plot(pair[1].t, pair[1].v, color='r', marker=markers[n % len(markers)], markersize=markersize, linestyle='-', label=pair[0])
-        ax2.plot(pair[1].t, pair[1].i, color='b', marker=markers[n % len(markers)], markersize=markersize, linestyle='-', label=pair[0])
+        ax1.plot(pair[1].t, pair[1].v, color='r', marker=markers[n % len(markers)], markersize=markersize, linestyle='-', label="voltage for " + pair[0])
+        ax2.plot(pair[1].t, pair[1].i, color='b', marker=markers[n % len(markers)], markersize=markersize, linestyle='-', label="current for " + pair[0])
 
     # Add a legend for clarity
     fig.legend(loc="upper right", bbox_to_anchor=(0.85, 0.85))
